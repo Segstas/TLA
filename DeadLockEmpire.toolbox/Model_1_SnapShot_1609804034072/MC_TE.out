@@ -1,0 +1,343 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 13 and seed -3963457597638302844 with 6 workers on 12 cores with 1214MB heap and 2730MB offheap memory [pid: 18204] (Mac OS X 10.15.7 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/a18851548/learning/Learning_MIPT_NEW/concurrency/tla/DeadLockEmpire.toolbox/Model_1/MC.tla
+Parsing file /Users/a18851548/learning/Learning_MIPT_NEW/concurrency/tla/DeadLockEmpire.toolbox/Model_1/DeadLockEmpire.tla
+Warning: symbols were renamed.
+Parsing file /private/var/folders/p0/gr1szz6j2fvby10x9sn684jm0000gq/T/AppTranslocation/13B72BB6-1247-4602-B6BE-AA8FAC860ACB/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/TLC.tla
+Parsing file /private/var/folders/p0/gr1szz6j2fvby10x9sn684jm0000gq/T/AppTranslocation/13B72BB6-1247-4602-B6BE-AA8FAC860ACB/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Naturals.tla
+Parsing file /private/var/folders/p0/gr1szz6j2fvby10x9sn684jm0000gq/T/AppTranslocation/13B72BB6-1247-4602-B6BE-AA8FAC860ACB/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Sequences.tla
+Parsing file /private/var/folders/p0/gr1szz6j2fvby10x9sn684jm0000gq/T/AppTranslocation/13B72BB6-1247-4602-B6BE-AA8FAC860ACB/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module DeadLockEmpire
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2021-01-05 02:47:10)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2021-01-05 02:47:10.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2132:1 @!@!@
+The first argument of Assert evaluated to FALSE; the second argument was:
+"Failure of assertion at line 18, column 15."
+@!@!@ENDMSG 2132 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ tempA = defaultInitValue
+/\ tempB = defaultInitValue
+/\ first = 0
+/\ second = 0
+/\ pc = <<"A1_", "A1">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <A1 line 85, col 7 to line 88, col 45 of module DeadLockEmpire>
+/\ tempA = 1
+/\ tempB = defaultInitValue
+/\ first = 0
+/\ second = 0
+/\ pc = <<"A1_", "A2">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <A1_ line 55, col 8 to line 58, col 46 of module DeadLockEmpire>
+/\ tempA = 1
+/\ tempB = defaultInitValue
+/\ first = 0
+/\ second = 0
+/\ pc = <<"A2_", "A2">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <A2_ line 60, col 8 to line 63, col 46 of module DeadLockEmpire>
+/\ tempA = 1
+/\ tempB = defaultInitValue
+/\ first = 1
+/\ second = 0
+/\ pc = <<"B1_", "A2">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <A2 line 90, col 7 to line 93, col 45 of module DeadLockEmpire>
+/\ tempA = 1
+/\ tempB = defaultInitValue
+/\ first = 1
+/\ second = 0
+/\ pc = <<"B1_", "B1">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <B1_ line 65, col 8 to line 68, col 46 of module DeadLockEmpire>
+/\ tempA = 1
+/\ tempB = 1
+/\ first = 1
+/\ second = 0
+/\ pc = <<"B2_", "B1">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <B2_ line 70, col 8 to line 73, col 45 of module DeadLockEmpire>
+/\ tempA = 1
+/\ tempB = 1
+/\ first = 1
+/\ second = 1
+/\ pc = <<"C", "B1">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+8: <B1 line 95, col 7 to line 98, col 45 of module DeadLockEmpire>
+/\ tempA = 1
+/\ tempB = 2
+/\ first = 1
+/\ second = 1
+/\ pc = <<"C", "B2">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+9: <B2 line 100, col 7 to line 103, col 44 of module DeadLockEmpire>
+/\ tempA = 1
+/\ tempB = 2
+/\ first = 1
+/\ second = 2
+/\ pc = <<"C", "Done">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2103:1 @!@!@
+The error occurred when TLC was evaluating the nested
+expressions at the following positions:
+0. Line 75, column 6 to line 81, column 51 in DeadLockEmpire
+1. Line 75, column 9 to line 75, column 19 in DeadLockEmpire
+2. Line 76, column 9 to line 79, column 23 in DeadLockEmpire
+3. Line 77, column 17 to line 78, column 72 in DeadLockEmpire
+4. Line 77, column 20 to line 78, column 72 in DeadLockEmpire
+
+
+@!@!@ENDMSG 2103 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2021-01-05 02:47:11
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 46, col 1 to line 46, col 4 of module DeadLockEmpire>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 47, col 9 to line 53, col 60 of module DeadLockEmpire: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<A1_ line 55, col 1 to line 55, col 3 of module DeadLockEmpire>: 3:7
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 11 to line 55, col 23 of module DeadLockEmpire: 75
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 55, col 11 to line 55, col 15 of module DeadLockEmpire: 68
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 11 to line 56, col 28 of module DeadLockEmpire: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 57, col 11 to line 57, col 40 of module DeadLockEmpire: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 58, col 11 to line 58, col 46 of module DeadLockEmpire: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<A2_ line 60, col 1 to line 60, col 3 of module DeadLockEmpire>: 5:9
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 60, col 11 to line 60, col 23 of module DeadLockEmpire: 76
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 60, col 11 to line 60, col 15 of module DeadLockEmpire: 67
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 61, col 11 to line 61, col 24 of module DeadLockEmpire: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 62, col 11 to line 62, col 40 of module DeadLockEmpire: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 63, col 11 to line 63, col 46 of module DeadLockEmpire: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<B1_ line 65, col 1 to line 65, col 3 of module DeadLockEmpire>: 6:11
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 65, col 11 to line 65, col 23 of module DeadLockEmpire: 77
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 65, col 11 to line 65, col 15 of module DeadLockEmpire: 66
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 66, col 11 to line 66, col 29 of module DeadLockEmpire: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 67, col 11 to line 67, col 40 of module DeadLockEmpire: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 11 to line 68, col 46 of module DeadLockEmpire: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<B2_ line 70, col 1 to line 70, col 3 of module DeadLockEmpire>: 7:12
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 70, col 11 to line 70, col 23 of module DeadLockEmpire: 77
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 70, col 11 to line 70, col 15 of module DeadLockEmpire: 65
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 71, col 11 to line 71, col 25 of module DeadLockEmpire: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 72, col 11 to line 72, col 38 of module DeadLockEmpire: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 73, col 11 to line 73, col 45 of module DeadLockEmpire: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<C line 75, col 1 to line 75, col 1 of module DeadLockEmpire>: 7:14
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 75, col 9 to line 75, col 19 of module DeadLockEmpire: 78
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 75, col 9 to line 75, col 13 of module DeadLockEmpire: 64
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 76, col 13 to line 76, col 36 of module DeadLockEmpire: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 76, col 13 to line 76, col 22 of module DeadLockEmpire: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 76, col 27 to line 76, col 36 of module DeadLockEmpire: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 77, col 17 to line 78, col 72 of module DeadLockEmpire: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 79, col 17 to line 79, col 23 of module DeadLockEmpire: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 80, col 9 to line 80, col 39 of module DeadLockEmpire: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 81, col 9 to line 81, col 51 of module DeadLockEmpire: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<A1 line 85, col 1 to line 85, col 2 of module DeadLockEmpire>: 3:7
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 85, col 10 to line 85, col 21 of module DeadLockEmpire: 69
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 85, col 10 to line 85, col 14 of module DeadLockEmpire: 62
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 86, col 10 to line 86, col 27 of module DeadLockEmpire: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 87, col 10 to line 87, col 38 of module DeadLockEmpire: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 88, col 10 to line 88, col 45 of module DeadLockEmpire: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<A2 line 90, col 1 to line 90, col 2 of module DeadLockEmpire>: 7:11
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 90, col 10 to line 90, col 21 of module DeadLockEmpire: 72
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 90, col 10 to line 90, col 14 of module DeadLockEmpire: 61
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 91, col 10 to line 91, col 23 of module DeadLockEmpire: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 92, col 10 to line 92, col 38 of module DeadLockEmpire: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 93, col 10 to line 93, col 45 of module DeadLockEmpire: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<B1 line 95, col 1 to line 95, col 2 of module DeadLockEmpire>: 9:12
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 95, col 10 to line 95, col 21 of module DeadLockEmpire: 72
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 95, col 10 to line 95, col 14 of module DeadLockEmpire: 60
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 96, col 10 to line 96, col 28 of module DeadLockEmpire: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 97, col 10 to line 97, col 38 of module DeadLockEmpire: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 98, col 10 to line 98, col 45 of module DeadLockEmpire: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<B2 line 100, col 1 to line 100, col 2 of module DeadLockEmpire>: 11:16
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 100, col 10 to line 100, col 21 of module DeadLockEmpire: 75
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 100, col 10 to line 100, col 14 of module DeadLockEmpire: 59
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 101, col 10 to line 101, col 24 of module DeadLockEmpire: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 102, col 10 to line 102, col 40 of module DeadLockEmpire: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 103, col 10 to line 103, col 44 of module DeadLockEmpire: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Terminating line 108, col 1 to line 108, col 11 of module DeadLockEmpire>: 0:4
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 108, col 40 to line 108, col 56 of module DeadLockEmpire: 79
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 108, col 40 to line 108, col 47 of module DeadLockEmpire: 71
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 108, col 31 to line 108, col 37 of module DeadLockEmpire: 58
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 109, col 19 to line 109, col 32 of module DeadLockEmpire: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(10) at 2021-01-05 02:47:11: 92 states generated (6 059 s/min), 59 distinct states found (3 885 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+92 states generated, 59 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 916ms at (2021-01-05 02:47:11)
+@!@!@ENDMSG 2186 @!@!@
