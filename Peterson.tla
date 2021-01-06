@@ -71,7 +71,9 @@ Spec == /\ Init /\ [][Next]_vars
 Termination == <>(\A self \in ProcSet: pc[self] = "Done")
 
 \* END TRANSLATION 
+
+petInv == (pc[0] /= "criticalSection") \/ (pc[1] /= "criticalSection")
 =============================================================================
 \* Modification History
-\* Last modified Wed Jan 06 19:34:14 MSK 2021 by a18851548
+\* Last modified Wed Jan 06 23:01:15 SAMT 2021 by a18851548
 \* Created Tue Jan 05 00:29:36 MSK 2021 by a18851548

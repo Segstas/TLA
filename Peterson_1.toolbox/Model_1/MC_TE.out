@@ -2,17 +2,17 @@
 TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with fp 90 and seed -8688836718278033089 with 6 workers on 12 cores with 1214MB heap and 2730MB offheap memory [pid: 28842] (Mac OS X 10.15.7 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+Running breadth-first search Model-Checking with fp 33 and seed 1831958133288642236 with 6 workers on 12 cores with 1214MB heap and 2730MB offheap memory [pid: 30626] (Mac OS X 10.15.7 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
 @!@!@ENDMSG 2220 @!@!@
 Parsing file /Users/a18851548/learning/Learning_MIPT_NEW/concurrency/tla/git/TLA/Peterson_1.toolbox/Model_1/MC.tla
 Parsing file /Users/a18851548/learning/Learning_MIPT_NEW/concurrency/tla/git/TLA/Peterson_1.toolbox/Model_1/Peterson.tla
-Parsing file /private/var/folders/p0/gr1szz6j2fvby10x9sn684jm0000gq/T/AppTranslocation/C692E34F-39FF-47CF-80CD-8EEFC7AEE42D/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/TLC.tla
-Parsing file /private/var/folders/p0/gr1szz6j2fvby10x9sn684jm0000gq/T/AppTranslocation/C692E34F-39FF-47CF-80CD-8EEFC7AEE42D/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Naturals.tla
-Parsing file /private/var/folders/p0/gr1szz6j2fvby10x9sn684jm0000gq/T/AppTranslocation/C692E34F-39FF-47CF-80CD-8EEFC7AEE42D/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Sequences.tla
-Parsing file /private/var/folders/p0/gr1szz6j2fvby10x9sn684jm0000gq/T/AppTranslocation/C692E34F-39FF-47CF-80CD-8EEFC7AEE42D/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/FiniteSets.tla
+Parsing file /private/var/folders/p0/gr1szz6j2fvby10x9sn684jm0000gq/T/AppTranslocation/7769DEA5-22E9-423D-B2C5-0B42729DDB6B/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/TLC.tla
+Parsing file /private/var/folders/p0/gr1szz6j2fvby10x9sn684jm0000gq/T/AppTranslocation/7769DEA5-22E9-423D-B2C5-0B42729DDB6B/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Naturals.tla
+Parsing file /private/var/folders/p0/gr1szz6j2fvby10x9sn684jm0000gq/T/AppTranslocation/7769DEA5-22E9-423D-B2C5-0B42729DDB6B/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Sequences.tla
+Parsing file /private/var/folders/p0/gr1szz6j2fvby10x9sn684jm0000gq/T/AppTranslocation/7769DEA5-22E9-423D-B2C5-0B42729DDB6B/d/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/FiniteSets.tla
 Semantic processing of module Peterson
 Semantic processing of module Naturals
 Semantic processing of module Sequences
@@ -23,7 +23,7 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2021-01-06 20:34:32)
+Starting... (2021-01-06 22:58:57)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2212:0 @!@!@
 Implied-temporal checking--satisfiability problem has 1 branches.
@@ -32,16 +32,16 @@ Implied-temporal checking--satisfiability problem has 1 branches.
 Computing initial states...
 @!@!@ENDMSG 2189 @!@!@
 @!@!@STARTMSG 2190:0 @!@!@
-Finished computing initial states: 1 distinct state generated at 2021-01-06 20:34:32.
+Finished computing initial states: 1 distinct state generated at 2021-01-06 22:58:59.
 @!@!@ENDMSG 2190 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(11) at 2021-01-06 20:34:32: 49 states generated, 34 distinct states found, 0 states left on queue.
+Progress(11) at 2021-01-06 22:58:59: 49 states generated, 34 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2192:0 @!@!@
-Checking temporal properties for the complete state space with 34 total distinct states at (2021-01-06 20:34:32)
+Checking temporal properties for the complete state space with 34 total distinct states at (2021-01-06 22:58:59)
 @!@!@ENDMSG 2192 @!@!@
 @!@!@STARTMSG 2267:0 @!@!@
-Finished checking temporal properties in 00s at 2021-01-06 20:34:32
+Finished checking temporal properties in 00s at 2021-01-06 22:58:59
 @!@!@ENDMSG 2267 @!@!@
 @!@!@STARTMSG 2193:0 @!@!@
 Model checking completed. No error has been found.
@@ -50,7 +50,7 @@ Model checking completed. No error has been found.
   calculated (optimistic):  val = 2.8E-17
 @!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2021-01-06 20:34:32
+The coverage statistics at 2021-01-06 22:58:59
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2773:0 @!@!@
 <Init line 26, col 1 to line 26, col 4 of module Peterson>: 1:1
@@ -59,67 +59,67 @@ The coverage statistics at 2021-01-06 20:34:32
   line 27, col 9 to line 30, col 46 of module Peterson: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<lock1 line 32, col 1 to line 32, col 11 of module Peterson>: 7:15
+<lock1 line 32, col 1 to line 32, col 11 of module Peterson>: 7:13
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 32, col 19 to line 32, col 36 of module Peterson: 95
+  line 32, col 19 to line 32, col 36 of module Peterson: 89
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 32, col 19 to line 32, col 26 of module Peterson: 80
+  |line 32, col 19 to line 32, col 26 of module Peterson: 76
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 33, col 19 to line 33, col 54 of module Peterson: 15
+  line 33, col 19 to line 33, col 54 of module Peterson: 13
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 34, col 19 to line 34, col 53 of module Peterson: 15
+  line 34, col 19 to line 34, col 53 of module Peterson: 13
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 35, col 19 to line 35, col 47 of module Peterson: 15
+  line 35, col 19 to line 35, col 47 of module Peterson: 13
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<lock2 line 37, col 1 to line 37, col 11 of module Peterson>: 8:13
+<lock2 line 37, col 1 to line 37, col 11 of module Peterson>: 9:15
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 37, col 19 to line 37, col 36 of module Peterson: 93
+  line 37, col 19 to line 37, col 36 of module Peterson: 91
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 37, col 19 to line 37, col 26 of module Peterson: 80
+  |line 37, col 19 to line 37, col 26 of module Peterson: 76
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 38, col 19 to line 38, col 32 of module Peterson: 13
+  line 38, col 19 to line 38, col 32 of module Peterson: 15
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 39, col 19 to line 39, col 54 of module Peterson: 13
+  line 39, col 19 to line 39, col 54 of module Peterson: 15
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 40, col 19 to line 40, col 55 of module Peterson: 13
+  line 40, col 19 to line 40, col 55 of module Peterson: 15
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 19 to line 41, col 30 of module Peterson: 13
+  line 41, col 19 to line 41, col 30 of module Peterson: 15
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<waiting line 43, col 1 to line 43, col 13 of module Peterson>: 6:7
+<waiting line 43, col 1 to line 43, col 13 of module Peterson>: 5:7
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 43, col 21 to line 43, col 40 of module Peterson: 87
+  line 43, col 21 to line 43, col 40 of module Peterson: 83
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 43, col 21 to line 43, col 28 of module Peterson: 80
+  |line 43, col 21 to line 43, col 28 of module Peterson: 76
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 44, col 23 to line 44, col 41 of module Peterson: 20
+  line 44, col 23 to line 44, col 41 of module Peterson: 21
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 44, col 23 to line 44, col 33 of module Peterson: 15
+  |line 44, col 23 to line 44, col 33 of module Peterson: 16
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 44, col 37 to line 44, col 41 of module Peterson: 15
+  |line 44, col 37 to line 44, col 41 of module Peterson: 16
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 44, col 47 to line 44, col 62 of module Peterson: 17
+  line 44, col 47 to line 44, col 62 of module Peterson: 18
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 44, col 49 to line 44, col 61 of module Peterson: 15
+  |line 44, col 49 to line 44, col 61 of module Peterson: 16
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 45, col 21 to line 45, col 65 of module Peterson: 7
@@ -128,31 +128,31 @@ The coverage statistics at 2021-01-06 20:34:32
   line 46, col 21 to line 46, col 55 of module Peterson: 7
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<criticalSection line 48, col 1 to line 48, col 21 of module Peterson>: 6:10
+<criticalSection line 48, col 1 to line 48, col 21 of module Peterson>: 5:8
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 48, col 29 to line 48, col 56 of module Peterson: 90
+  line 48, col 29 to line 48, col 56 of module Peterson: 84
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 48, col 29 to line 48, col 36 of module Peterson: 80
+  |line 48, col 29 to line 48, col 36 of module Peterson: 76
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 49, col 29 to line 49, col 32 of module Peterson: 10
+  line 49, col 29 to line 49, col 32 of module Peterson: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 50, col 29 to line 50, col 64 of module Peterson: 10
+  line 50, col 29 to line 50, col 64 of module Peterson: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 51, col 29 to line 51, col 63 of module Peterson: 10
+  line 51, col 29 to line 51, col 63 of module Peterson: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<unlock line 53, col 1 to line 53, col 12 of module Peterson>: 6:9
+<unlock line 53, col 1 to line 53, col 12 of module Peterson>: 7:9
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 53, col 20 to line 53, col 38 of module Peterson: 89
+  line 53, col 20 to line 53, col 38 of module Peterson: 85
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 53, col 20 to line 53, col 27 of module Peterson: 80
+  |line 53, col 20 to line 53, col 27 of module Peterson: 76
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 54, col 20 to line 54, col 56 of module Peterson: 9
@@ -167,28 +167,34 @@ The coverage statistics at 2021-01-06 20:34:32
 <Terminating line 62, col 1 to line 62, col 11 of module Peterson>: 0:2
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 62, col 40 to line 62, col 56 of module Peterson: 52
+  line 62, col 40 to line 62, col 56 of module Peterson: 49
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 62, col 40 to line 62, col 47 of module Peterson: 48
+  |line 62, col 40 to line 62, col 47 of module Peterson: 45
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 62, col 31 to line 62, col 37 of module Peterson: 40
+  line 62, col 31 to line 62, col 37 of module Peterson: 38
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 63, col 19 to line 63, col 32 of module Peterson: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2774:0 @!@!@
-<inv_160995087206384000 line 5, col 1 to line 5, col 22 of module MC>
+<petInv line 75, col 1 to line 75, col 6 of module Peterson>
 @!@!@ENDMSG 2774 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 6, col 1 to line 6, col 36 of module MC: 34
+  line 75, col 11 to line 75, col 70 of module Peterson: 34
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 75, col 12 to line 75, col 37 of module Peterson: 34
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 75, col 44 to line 75, col 69 of module Peterson: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(11) at 2021-01-06 20:34:32: 49 states generated (3 572 s/min), 34 distinct states found (2 478 ds/min), 0 states left on queue.
+Progress(11) at 2021-01-06 22:58:59: 49 states generated (1 579 s/min), 34 distinct states found (1 096 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
 49 states generated, 34 distinct states found, 0 states left on queue.
@@ -200,5 +206,5 @@ The depth of the complete state graph search is 11.
 The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 2).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 828ms at (2021-01-06 20:34:32)
+Finished in 1915ms at (2021-01-06 22:58:59)
 @!@!@ENDMSG 2186 @!@!@
