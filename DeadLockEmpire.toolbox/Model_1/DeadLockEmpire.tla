@@ -7,35 +7,37 @@ variables first = 0, second = 0;
 process thread0 = 1
 variables tempA, tempB
 begin
-  A1: tempA := first + 1;
-  A2: first := tempA;
+  T0: skip; \* bubusiness_logic
+
+  T0A1: tempA := first + 1;
+  T0A2: first := tempA;
   
-  B1: tempB := second + 1;
-  B2: second := tempB;
+  T0B1: tempB := second + 1;
+  T0B2: second := tempB;
   
-  C:
+  T0C1:
     if (second = 2 /\ first /= 2) then
-              assert FALSE;
+  T0C2:           
+    assert FALSE;
     end if;
+    
 end process
 
 
 process thread1 = 2
 begin
-  A1: tempA := first + 1;
-  A2: first := tempA;
+  T1: skip; \* bubusiness_logic
+
+  T1A1: tempA := first + 1;
+  T1A2: first := tempA;
   
-  B1: tempB := second + 1;
-  B2: second := tempB;
+  T1B1: tempB := second + 1;
+  T1B2: second := tempB;
 end process
 
 end algorithm;
 *)
-\* BEGIN TRANSLATION (chksum(pcal) = "7c328528" /\ chksum(tla) = "c036f569")
-\* Label A1 of process thread0 at line 10 col 7 changed to A1_
-\* Label A2 of process thread0 at line 11 col 7 changed to A2_
-\* Label B1 of process thread0 at line 13 col 7 changed to B1_
-\* Label B2 of process thread0 at line 14 col 7 changed to B2_
+\* BEGIN TRANSLATION (chksum(pcal) = "f5f4b45f" /\ chksum(tla) = "96595c6e")
 CONSTANT defaultInitValue
 VARIABLES first, second, pc, tempA, tempB
 
@@ -49,60 +51,73 @@ Init == (* Global variables *)
         (* Process thread0 *)
         /\ tempA = defaultInitValue
         /\ tempB = defaultInitValue
-        /\ pc = [self \in ProcSet |-> CASE self = 1 -> "A1_"
-                                        [] self = 2 -> "A1"]
+        /\ pc = [self \in ProcSet |-> CASE self = 1 -> "T0"
+                                        [] self = 2 -> "T1"]
 
-A1_ == /\ pc[1] = "A1_"
-       /\ tempA' = first + 1
-       /\ pc' = [pc EXCEPT ![1] = "A2_"]
-       /\ UNCHANGED << first, second, tempB >>
+T0 == /\ pc[1] = "T0"
+      /\ TRUE
+      /\ pc' = [pc EXCEPT ![1] = "T0A1"]
+      /\ UNCHANGED << first, second, tempA, tempB >>
 
-A2_ == /\ pc[1] = "A2_"
-       /\ first' = tempA
-       /\ pc' = [pc EXCEPT ![1] = "B1_"]
-       /\ UNCHANGED << second, tempA, tempB >>
+T0A1 == /\ pc[1] = "T0A1"
+        /\ tempA' = first + 1
+        /\ pc' = [pc EXCEPT ![1] = "T0A2"]
+        /\ UNCHANGED << first, second, tempB >>
 
-B1_ == /\ pc[1] = "B1_"
-       /\ tempB' = second + 1
-       /\ pc' = [pc EXCEPT ![1] = "B2_"]
-       /\ UNCHANGED << first, second, tempA >>
+T0A2 == /\ pc[1] = "T0A2"
+        /\ first' = tempA
+        /\ pc' = [pc EXCEPT ![1] = "T0B1"]
+        /\ UNCHANGED << second, tempA, tempB >>
 
-B2_ == /\ pc[1] = "B2_"
-       /\ second' = tempB
-       /\ pc' = [pc EXCEPT ![1] = "C"]
-       /\ UNCHANGED << first, tempA, tempB >>
+T0B1 == /\ pc[1] = "T0B1"
+        /\ tempB' = second + 1
+        /\ pc' = [pc EXCEPT ![1] = "T0B2"]
+        /\ UNCHANGED << first, second, tempA >>
 
-C == /\ pc[1] = "C"
-     /\ IF (second = 2 /\ first /= 2)
-           THEN /\ Assert(FALSE, 
-                          "Failure of assertion at line 18, column 15.")
-           ELSE /\ TRUE
-     /\ pc' = [pc EXCEPT ![1] = "Done"]
-     /\ UNCHANGED << first, second, tempA, tempB >>
+T0B2 == /\ pc[1] = "T0B2"
+        /\ second' = tempB
+        /\ pc' = [pc EXCEPT ![1] = "T0C1"]
+        /\ UNCHANGED << first, tempA, tempB >>
 
-thread0 == A1_ \/ A2_ \/ B1_ \/ B2_ \/ C
+T0C1 == /\ pc[1] = "T0C1"
+        /\ IF (second = 2 /\ first /= 2)
+              THEN /\ pc' = [pc EXCEPT ![1] = "T0C2"]
+              ELSE /\ pc' = [pc EXCEPT ![1] = "Done"]
+        /\ UNCHANGED << first, second, tempA, tempB >>
 
-A1 == /\ pc[2] = "A1"
-      /\ tempA' = first + 1
-      /\ pc' = [pc EXCEPT ![2] = "A2"]
-      /\ UNCHANGED << first, second, tempB >>
+T0C2 == /\ pc[1] = "T0C2"
+        /\ Assert(FALSE, "Failure of assertion at line 21, column 5.")
+        /\ pc' = [pc EXCEPT ![1] = "Done"]
+        /\ UNCHANGED << first, second, tempA, tempB >>
 
-A2 == /\ pc[2] = "A2"
-      /\ first' = tempA
-      /\ pc' = [pc EXCEPT ![2] = "B1"]
-      /\ UNCHANGED << second, tempA, tempB >>
+thread0 == T0 \/ T0A1 \/ T0A2 \/ T0B1 \/ T0B2 \/ T0C1 \/ T0C2
 
-B1 == /\ pc[2] = "B1"
-      /\ tempB' = second + 1
-      /\ pc' = [pc EXCEPT ![2] = "B2"]
-      /\ UNCHANGED << first, second, tempA >>
+T1 == /\ pc[2] = "T1"
+      /\ TRUE
+      /\ pc' = [pc EXCEPT ![2] = "T1A1"]
+      /\ UNCHANGED << first, second, tempA, tempB >>
 
-B2 == /\ pc[2] = "B2"
-      /\ second' = tempB
-      /\ pc' = [pc EXCEPT ![2] = "Done"]
-      /\ UNCHANGED << first, tempA, tempB >>
+T1A1 == /\ pc[2] = "T1A1"
+        /\ tempA' = first + 1
+        /\ pc' = [pc EXCEPT ![2] = "T1A2"]
+        /\ UNCHANGED << first, second, tempB >>
 
-thread1 == A1 \/ A2 \/ B1 \/ B2
+T1A2 == /\ pc[2] = "T1A2"
+        /\ first' = tempA
+        /\ pc' = [pc EXCEPT ![2] = "T1B1"]
+        /\ UNCHANGED << second, tempA, tempB >>
+
+T1B1 == /\ pc[2] = "T1B1"
+        /\ tempB' = second + 1
+        /\ pc' = [pc EXCEPT ![2] = "T1B2"]
+        /\ UNCHANGED << first, second, tempA >>
+
+T1B2 == /\ pc[2] = "T1B2"
+        /\ second' = tempB
+        /\ pc' = [pc EXCEPT ![2] = "Done"]
+        /\ UNCHANGED << first, tempA, tempB >>
+
+thread1 == T1 \/ T1A1 \/ T1A2 \/ T1B1 \/ T1B2
 
 (* Allow infinite stuttering to prevent deadlock on termination. *)
 Terminating == /\ \A self \in ProcSet: pc[self] = "Done"
@@ -116,7 +131,8 @@ Spec == Init /\ [][Next]_vars
 Termination == <>(\A self \in ProcSet: pc[self] = "Done")
 
 \* END TRANSLATION 
+
 =============================================================================
 \* Modification History
-\* Last modified Tue Jan 05 02:46:36 MSK 2021 by a18851548
+\* Last modified Wed Jan 06 19:48:21 MSK 2021 by a18851548
 \* Created Tue Jan 05 01:33:02 MSK 2021 by a18851548

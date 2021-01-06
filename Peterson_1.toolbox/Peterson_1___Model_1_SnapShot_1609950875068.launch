@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.lamport.tla.toolbox.tool.tlc.modelCheck">
-    <stringAttribute key="configurationName" value="Model_1"/>
+    <stringAttribute key="configurationName" value="Model_1_SnapShot_1609950875068"/>
     <intAttribute key="distributedFPSetCount" value="0"/>
     <stringAttribute key="distributedNetworkInterface" value="192.168.0.103"/>
     <intAttribute key="distributedNodesCount" value="1"/>
     <stringAttribute key="distributedTLC" value="off"/>
-    <intAttribute key="fpIndex" value="78"/>
+    <intAttribute key="fpIndex" value="47"/>
     <intAttribute key="maxHeapSize" value="25"/>
     <stringAttribute key="modelBehaviorInit" value=""/>
     <stringAttribute key="modelBehaviorNext" value=""/>
     <stringAttribute key="modelBehaviorSpec" value="Spec"/>
     <intAttribute key="modelBehaviorSpecType" value="1"/>
-    <stringAttribute key="modelBehaviorVars" value="tempA, tempB, first, second, pc"/>
+    <stringAttribute key="modelBehaviorVars" value="flag, victim, other, pc"/>
     <stringAttribute key="modelComments" value=""/>
     <booleanAttribute key="modelCorrectnessCheckDeadlock" value="true"/>
-    <listAttribute key="modelCorrectnessInvariants"/>
+    <listAttribute key="modelCorrectnessInvariants">
+        <listEntry value="1{pc[0],pc[1]} /= {&quot;criticalSection&quot;}"/>
+    </listAttribute>
     <listAttribute key="modelCorrectnessProperties">
         <listEntry value="1Termination"/>
     </listAttribute>
     <intAttribute key="modelEditorOpenTabs" value="8"/>
-    <listAttribute key="modelParameterConstants">
-        <listEntry value="defaultInitValue;;defaultInitValue;1;0"/>
-    </listAttribute>
+    <stringAttribute key="modelExpressionEval" value=""/>
+    <listAttribute key="modelParameterConstants"/>
     <intAttribute key="modelVersion" value="20191005"/>
     <intAttribute key="numberOfWorkers" value="6"/>
     <stringAttribute key="result.mail.address" value=""/>
-    <stringAttribute key="specName" value="DeadLockEmpire"/>
+    <stringAttribute key="specName" value="Peterson_1"/>
     <stringAttribute key="tlcResourcesProfile" value="local custom"/>
 </launchConfiguration>
